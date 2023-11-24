@@ -16,7 +16,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.vahid.note89.feature_note.presentation.add_edit_note.component.AddeditNoteScreen
+import com.vahid.note89.feature_note.presentation.add_edit_note.component.AddEditNoteScreen
 import com.vahid.note89.feature_note.presentation.notes.component.NoteScreen
 import com.vahid.note89.feature_note.presentation.util.Screen
 import com.vahid.note89.ui.theme.Note89Theme
@@ -59,7 +59,7 @@ class MainActivity : ComponentActivity() {
                             )
                         ) {
                             val color = it.arguments?.getInt("noteColor") ?: -1
-                            AddeditNoteScreen(
+                            AddEditNoteScreen(
                                 navController = navController,
                                 noteColor = color
                             )
