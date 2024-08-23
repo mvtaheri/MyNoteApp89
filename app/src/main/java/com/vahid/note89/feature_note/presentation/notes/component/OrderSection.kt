@@ -28,12 +28,12 @@ fun OrderSection(
             Spacer(modifier = Modifier.height(8.dp))
             DefaultRadioButton(
                 text = "Date",
-                selected = noteOrder is NoteOrder.Title,
+                selected = noteOrder is NoteOrder.Date,
                 onSelect = { onOrderChange(NoteOrder.Date(noteOrder.orderType)) })
             Spacer(modifier = Modifier.height(8.dp))
             DefaultRadioButton(
                 text = "Color",
-                selected = noteOrder is NoteOrder.Title,
+                selected = noteOrder is NoteOrder.Color,
                 onSelect = { onOrderChange(NoteOrder.Color(noteOrder.orderType)) })
             Spacer(modifier = Modifier.height(8.dp))
         }
@@ -44,12 +44,12 @@ fun OrderSection(
             DefaultRadioButton(
                 text = "Ascending",
                 selected = noteOrder.orderType is OrderType.Ascending,
-                onSelect = { onOrderChange(noteOrder.copy(OrderType.Descending)) })
+                onSelect = { onOrderChange(noteOrder.copy(OrderType.Ascending)) })
             Spacer(modifier = Modifier.height(8.dp))
             DefaultRadioButton(
                 text = "Descending",
-                selected = noteOrder is NoteOrder.Title,
-                onSelect = { onOrderChange(noteOrder.copy(OrderType.Ascending)) })
+                selected =noteOrder.orderType is OrderType.Descending,
+                onSelect = { onOrderChange(noteOrder.copy(OrderType.Descending)) })
             Spacer(modifier = Modifier.height(8.dp))
         }
     }
